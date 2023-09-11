@@ -78,13 +78,12 @@ public class Gondolatolvaso {
             oszlopSzama = sc.nextInt();
             jo = oszlopSzama >= 1 && oszlopSzama <= 3;
         } while (!jo);
-        
+
         return oszlopSzama;
 
     }
 
     private static void kever(int oszlopSzama) {
-
 
         switch (oszlopSzama) {
             case (1):
@@ -93,20 +92,43 @@ public class Gondolatolvaso {
                     pakli[i + 7] = pakli[19 - (i - 1) * 3];
                     pakli[i + 14] = pakli[21 - (i - 1) * 3];
                 }
+                for (int i = 1; i < pakli.length; i++) {
+            String lap = pakli[i];
+            System.out.print(lap + "\t");
+            if (i % 3 == 0) {
+                System.out.println("");
+            }
+        }
+                break;
             case (2):
                 for (int i = 1; i < 7; i++) {
                     pakli[i] = pakli[19 - (i - 1) * 3];
                     pakli[i + 7] = pakli[20 - (i - 1) * 3];
                     pakli[i + 14] = pakli[21 - (i - 1) * 3];
                 }
+                for (int i = 1; i < pakli.length; i++) {
+            String lap = pakli[i];
+            System.out.print(lap + "\t");
+            if (i % 3 == 0) {
+                System.out.println("");
+            }
+        }
+                break;
             case (3):
                 for (int i = 1; i < 7; i++) {
                     pakli[i] = pakli[21 - (i - 1) * 3];
-                    pakli[i + 7] = pakli[19 - (i - 1) * 3];
-                    pakli[i + 14] = pakli[20 - (i - 1) * 3];
+                    pakli[i + 7] = pakli[20 - (i - 1) * 3];
+                    pakli[i + 14] = pakli[19 - (i - 1) * 3];
+                }
+
+                for (int i = 1; i < pakli.length; i++) {
+                    String lap = pakli[i];
+                    System.out.print(lap + "\t");
+                    if (i % 3 == 0) {
+                        System.out.println("");
+                    }
                 }
                 break;
-
         }
     }
 
