@@ -13,12 +13,9 @@ public class Gondolatolvaso {
     }
 
     private static void jatekMenet() {
-        /// int tomb[] = new int[21];
-        //for (int i = 0; i < 3; i++) {
         kirak();
-        //melyik();
+
         kever(melyik());
-        //  }
 
         //ezVolt();
     }
@@ -75,16 +72,20 @@ public class Gondolatolvaso {
     private static int melyik() {
         Scanner sc = new Scanner(System.in);
         boolean jo;
+        int oszlopSzama;
         do {
-
-            System.out.print("Melyik oszlop? {1-3}:");
-            int oszlopSzama = sc.nextInt();
+            System.out.print("Melyik oszlop? {1-3}: ");
+            oszlopSzama = sc.nextInt();
             jo = oszlopSzama >= 1 && oszlopSzama <= 3;
         } while (!jo);
+        
+        return oszlopSzama;
 
     }
 
     private static void kever(int oszlopSzama) {
+
+
         switch (oszlopSzama) {
             case (2):
                 for (int i = 1; i < 7; i++) {
@@ -103,8 +104,8 @@ public class Gondolatolvaso {
         }
     }
 
-    private static void ezVolt(int[] kartya) {
-        System.out.println("A gondolt kártya: " + kartya[11]);
+    private static void ezVolt() {
+        System.out.println("A gondolt kártya: " + pakli[11]);
     }
 
 }
