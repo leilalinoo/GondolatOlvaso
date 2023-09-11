@@ -77,7 +77,7 @@ public class Gondolatolvaso {
         boolean jo;
         do {
 
-            System.out.println("Melyik oszlop? {1-3}:");
+            System.out.print("Melyik oszlop? {1-3}:");
             int oszlopSzama = sc.nextInt();
             jo = oszlopSzama >= 1 && oszlopSzama <= 3;
         } while (!jo);
