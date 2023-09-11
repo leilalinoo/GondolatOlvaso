@@ -15,42 +15,15 @@ public class Gondolatolvaso {
     private static void jatekMenet() {
         kirak();
         kever(melyik());
+        System.out.println("");
+        kirak();
         //ezVolt();
     }
 
     private static void kirak() {
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VII"};
-        /* List<String> llista = new ArrayList<String>();
-        for (int i = 0; i < szinek.length - 1; i++) {
-            for (int j = 0; j < ertekek.length; j++) {
-                llista.add(szinek[i] + "_" + ertekek[j]);
-            }
-        }
-        llista.add(szinek[3] + "_" + ertekek[0]);
-        llista.add(szinek[3] + "_" + ertekek[1]);
-        llista.add(szinek[3] + "_" + ertekek[2]);
-       
-       
 
-        for (int i = 0; i < llista.size(); i++) {
-            pakli[i] = llista.get(i);
-        }*/
-
- /* int oszlop = 1;
-        for (int i = 0; i < pakli.length; i++) {
-            if (oszlop % 3 != 0) {
-                System.out.print(pakli[i]+"\t");
-            }
-           /* else if(sor % 3 == 0)
-            {
-                System.out.println("\t");
-            }
-            else{
-                System.out.println("\n");
-            }
-            oszlop++;
-        }*/
         int a = 1;
         for (String szin : szinek) {
             for (int e = 0; a < 22 && e < ertekek.length; e++) {
@@ -82,8 +55,6 @@ public class Gondolatolvaso {
     }
 
     private static void kever(int oszlopSzama) {
-
-
         switch (oszlopSzama) {
             case (1):
                 for (int i = 1; i < 7; i++) {
@@ -91,12 +62,14 @@ public class Gondolatolvaso {
                     pakli[i + 7] = pakli[19 - (i - 1) * 3];
                     pakli[i + 14] = pakli[21 - (i - 1) * 3];
                 }
+            break;
             case (2):
                 for (int i = 1; i < 7; i++) {
                     pakli[i] = pakli[19 - (i - 1) * 3];
                     pakli[i + 7] = pakli[20 - (i - 1) * 3];
                     pakli[i + 14] = pakli[21 - (i - 1) * 3];
                 }
+                break;
             case (3):
                 for (int i = 1; i < 7; i++) {
                     pakli[i] = pakli[21 - (i - 1) * 3];
