@@ -13,12 +13,10 @@ public class Gondolatolvaso {
     }
 
     private static void jatekMenet() {
-        /// int tomb[] = new int[21];
-        //for (int i = 0; i < 3; i++) {
         kirak();
-          melyik();
+        kever(melyik());
+        //melyik();
         //   kever();
-        //  }
 
         //ezVolt();
     }
@@ -72,19 +70,44 @@ public class Gondolatolvaso {
         }
     }
 
-    private static void melyik() {
+    private static int melyik() {
         Scanner sc = new Scanner(System.in);
         boolean jo;
+        int oszlopSzama;
         do {
-
-            System.out.println("Melyik oszlop? {1-3}:");
-            int oszlopSzama = sc.nextInt();
+            System.out.print("Melyik oszlop? {1-3}: ");
+            oszlopSzama = sc.nextInt();
             jo = oszlopSzama >= 1 && oszlopSzama <= 3;
         } while (!jo);
+        
+        return oszlopSzama;
 
     }
 
-    private static void kever() {
+    private static void kever(int oszlopSzama) {
+        
+        switch(oszlopSzama){
+            case(1):
+                for (int i = 1; i < 7; i++) {
+                    pakli[i] = pakli[(i-1)*3];
+                    pakli[i+7] = pakli[(i-1)*3];
+                    pakli[i+14] = pakli[(i-1)*3];
+                }
+            case(2):
+                for (int i = 1; i < 7; i++) {
+                    pakli[i] = pakli[(i-1)*3];
+                    pakli[i+7] = pakli[(i-1)*3];
+                    pakli[i+14] = pakli[(i-1)*3];
+                }
+            case(3):
+                for (int i = 0; i < 7; i++) {
+                    pakli[i] = pakli[(i-1)*3];
+                    pakli[i+7] = pakli[(i-1)*3];
+                    pakli[i+14] = pakli[(i-1)*3];
+                }
+        }
+        
+        
     }
 
     private static void ezVolt(int[] kartya) {
