@@ -16,8 +16,8 @@ public class Gondolatolvaso {
         /// int tomb[] = new int[21];
         //for (int i = 0; i < 3; i++) {
         kirak();
-        melyik();
-        //   kever();
+        //melyik();
+        kever(melyik());
         //  }
 
         //ezVolt();
@@ -72,7 +72,7 @@ public class Gondolatolvaso {
         }
     }
 
-    private static void melyik() {
+    private static int melyik() {
         Scanner sc = new Scanner(System.in);
         boolean jo;
         do {
