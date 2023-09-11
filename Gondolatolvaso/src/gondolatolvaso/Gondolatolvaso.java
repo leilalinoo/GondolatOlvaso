@@ -16,7 +16,7 @@ public class Gondolatolvaso {
         /// int tomb[] = new int[21];
         //for (int i = 0; i < 3; i++) {
         kirak();
-          melyik();
+        melyik();
         //   kever();
         //  }
 
@@ -84,7 +84,23 @@ public class Gondolatolvaso {
 
     }
 
-    private static void kever() {
+    private static void kever(int oszlopSzama) {
+        switch (oszlopSzama) {
+            case (2):
+                for (int i = 1; i < 7; i++) {
+                    i = 19 - (i - 1) * 3;
+                    i + 7 = 20 - (i - 1) * 3;
+                    i + 14 = 21 - (i - 1) * 3;
+                }
+            case (3):
+                for (int i = 1; i < 7; i++) {
+                    i = 21 - (i - 1) * 3;
+                    i + 7 = 19 - (i - 1) * 3;
+                    i + 14 = 20 - (i - 1) * 3;
+                }
+                break;
+
+        }
     }
 
     private static void ezVolt(int[] kartya) {
